@@ -1,6 +1,6 @@
 # MK808-Linux
 
-Ubuntu for MK808 Android TV Stick (RK3066 Chip)
+Out-of-box Ubuntu for MK808 Android TV Stick (RK3066 Chip)
 
 ## How To
 
@@ -34,7 +34,8 @@ Ubuntu for MK808 Android TV Stick (RK3066 Chip)
         - passwd: `linux`
 
 ## Weird stuff
-    - ext4 in 2024 has incompatible features than ext4 in 2014 :(, so just use ext2 
+    - ext4 in 2024 has incompatible features than ext4 in 2014 :(, so just use ext2
+    - It's possible to fit rootfs in ROM system partition, SD cards is more flexible
 
 ## Reference
 
