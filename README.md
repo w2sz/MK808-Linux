@@ -349,3 +349,134 @@ linux@ubuntu:~> sudo cat /proc/iomem
   95800000-967fffff : rk-fb
 96800000-9fffffff : System RAM
 ```
+
+### clocks
+
+```plaintext
+ sudo cat /proc/clocks   
+pd_dbg      on  0 Hz usecount = 0
+pd_gpu      on  0 Hz usecount = 0
+pd_video    on  0 Hz usecount = 0
+pd_display  on  0 Hz usecount = 1
+    pd_ipp      0 Hz usecount = 0 parent = pd_display
+    pd_rga      0 Hz usecount = 0 parent = pd_display
+    pd_cif1     0 Hz usecount = 0 parent = pd_display
+    pd_cif0     0 Hz usecount = 0 parent = pd_display
+    pd_lcdc1    0 Hz usecount = 1 parent = pd_display
+    pd_lcdc0    0 Hz usecount = 0 parent = pd_display
+pd_peri     on  0 Hz usecount = 0
+pclkin_cif1 off 0 Hz usecount = 0
+    cif1_in     0 Hz usecount = 0 parent = pclkin_cif1
+    inv_cif1    0 Hz usecount = 0 parent = pclkin_cif1
+pclkin_cif0 off 0 Hz usecount = 0
+    cif0_in     0 Hz usecount = 0 parent = pclkin_cif0
+    inv_cif0    0 Hz usecount = 0 parent = pclkin_cif0
+hsadc_ext   0 Hz usecount = 0
+rmii_clkin  0 Hz usecount = 0
+xin27m      27 MHz usecount = 0
+xin24m      24 MHz usecount = 8
+    timer2      off 24 MHz usecount = 0 parent = xin24m
+    timer1      on  24 MHz usecount = 1 parent = xin24m
+    timer0      on  24 MHz usecount = 1 parent = xin24m
+    uart3       24 MHz usecount = 0 parent = xin24m
+    uart2       24 MHz usecount = 1 parent = xin24m
+    uart1       24 MHz usecount = 0 parent = xin24m
+    uart0       24 MHz usecount = 0 parent = xin24m
+    otgphy1     on  24 MHz usecount = 1 parent = xin24m
+    otgphy0     on  24 MHz usecount = 1 parent = xin24m
+    tsadc       off 50 KHz usecount = 0 parent = xin24m
+    saradc      on  1 MHz usecount = 1 parent = xin24m
+    general_pll 297 MHz usecount = 4 parent = xin24m
+        gpu         off 148.500000 MHz usecount = 0 parent = general_pll
+        aclk_vdpu   off 297 MHz usecount = 0 parent = general_pll
+            hclk_vdpu   off 74.250000 MHz usecount = 0 parent = aclk_vdpu
+        aclk_vepu   off 297 MHz usecount = 0 parent = general_pll
+            hclk_vepu   off 74.250000 MHz usecount = 0 parent = aclk_vepu
+        cif_out_pll 297 MHz usecount = 0 parent = general_pll
+            cif1_out_div off 29.700000 MHz usecount = 0 parent = cif_out_pll
+                cif1_out    29.700000 MHz usecount = 0 parent = cif1_out_div
+            cif0_out_div off 29.700000 MHz usecount = 0 parent = cif_out_pll
+                cif0_out    29.700000 MHz usecount = 0 parent = cif0_out_div
+        dclk_lcdc1_div 148.500000 MHz usecount = 1 parent = general_pll
+            dclk_lcdc1  on  148.500000 MHz usecount = 2 parent = dclk_lcdc1_div
+        aclk_lcdc1_rga_parent on  297 MHz usecount = 1 parent = general_pll
+            aclk_rga    off 297 MHz usecount = 0 parent = aclk_lcdc1_rga_parent
+            aclk_cif1   off 297 MHz usecount = 0 parent = aclk_lcdc1_rga_parent
+            aclk_lcdc1  on  297 MHz usecount = 1 parent = aclk_lcdc1_rga_parent
+        aclk_lcdc0_ipp_parent off 297 MHz usecount = 0 parent = general_pll
+            aclk_ipp    off 297 MHz usecount = 0 parent = aclk_lcdc0_ipp_parent
+            aclk_cif0   off 297 MHz usecount = 0 parent = aclk_lcdc0_ipp_parent
+            aclk_lcdc0  off 297 MHz usecount = 0 parent = aclk_lcdc0_ipp_parent
+        hsadc_pll_div on  29.700000 MHz usecount = 0 parent = general_pll
+            hsadc       29.700000 MHz usecount = 0 parent = hsadc_pll_div
+            hsadc_frac_div off 1.485000 MHz usecount = 0 parent = hsadc_pll_div
+        uart_pll    297 MHz usecount = 0 parent = general_pll
+            uart3_div   off 297 MHz usecount = 0 parent = uart_pll
+                uart3_frac_div off 14.850000 MHz usecount = 0 parent = uart3_div
+            uart2_div   off 297 MHz usecount = 0 parent = uart_pll
+                uart2_frac_div off 14.850000 MHz usecount = 0 parent = uart2_div
+            uart1_div   off 297 MHz usecount = 0 parent = uart_pll
+                uart1_frac_div off 14.850000 MHz usecount = 0 parent = uart1_div
+            uart0_div   off 297 MHz usecount = 0 parent = uart_pll
+                uart0_frac_div off 14.850000 MHz usecount = 0 parent = uart0_div
+        aclk_periph on  148.500000 MHz usecount = 7 parent = general_pll
+            aclk_peri_axi_matrix on  148.500000 MHz usecount = 1 parent = aclk_periph
+            aclk_cpu_peri on  148.500000 MHz usecount = 1 parent = aclk_periph
+            aclk_peri_niu on  148.500000 MHz usecount = 1 parent = aclk_periph
+            dma2        on  148.500000 MHz usecount = 1 parent = aclk_periph
+            aclk_smc    off 148.500000 MHz usecount = 0 parent = aclk_periph
+            hclk_periph on  148.500000 MHz usecount = 12 parent = aclk_periph
+                hclk_pidfilter on  148.500000 MHz usecount = 1 parent = hclk_periph
+                nandc       on  148.500000 MHz usecount = 1 parent = hclk_periph
+                hclk_mac    on  148.500000 MHz usecount = 1 parent = hclk_periph
+                hclk_emem_peri on  148.500000 MHz usecount = 1 parent = hclk_periph
+                hclk_peri_ahb_arbi on  148.500000 MHz usecount = 1 parent = hclk_periph
+                hclk_peri_axi_matrix on  148.500000 MHz usecount = 1 parent = hclk_periph
+                hclk_hsadc  off 148.500000 MHz usecount = 0 parent = hclk_periph
+                hclk_emmc   off 148.500000 MHz usecount = 0 parent = hclk_periph
+                emmc        off 6.187500 MHz usecount = 0 parent = hclk_periph
+                hclk_sdio   on  148.500000 MHz usecount = 1 parent = hclk_periph
+                sdio        on  24.750000 MHz usecount = 1 parent = hclk_periph
+                hclk_sdmmc  on  148.500000 MHz usecount = 1 parent = hclk_periph
+                sdmmc       on  49.500000 MHz usecount = 1 parent = hclk_periph
+                hclk_usb_peri on  148.500000 MHz usecount = 2 parent = hclk_periph
+CLKSEL19           :bb8ea60
+CLKSEL20           :bb8ea60
+CLKSEL21           :b01
+CLKSEL22           :900
+CLKSEL23           :bb8ea60
+CLKSEL24           :178b
+CLKSEL25           :0
+CLKSEL26           :0
+CLKSEL27           :300
+CLKSEL28           :101
+CLKSEL29           :913
+CLKSEL30           :0
+CLKSEL31           :8080
+CLKSEL32           :8080
+CLKSEL33           :101
+CLKSEL34           :1df
+CLKGATE0          :6602
+CLKGATE1          :ff04
+CLKGATE2          :d6b0
+CLKGATE3          :3f9b
+CLKGATE4          :2000
+CLKGATE5          :1104
+CLKGATE6          :f73
+CLKGATE7          :b226
+CLKGATE8          :1fb
+CLKGATE9          :0
+GLB_SRST_FST:0
+GLB_SRST_SND:0
+CLKGATE0          :0
+CLKGATE1          :0
+CLKGATE2          :0
+CLKGATE3          :0
+CLKGATE4          :0
+CLKGATE5          :0
+CLKGATE6          :0
+CLKGATE7          :0
+CLKGATE8          :0
+CRU MISC    :0
+GLB_CNT_TH  :64
+```
