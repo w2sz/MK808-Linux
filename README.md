@@ -294,3 +294,58 @@ Module                  Size  Used by
 sg                     20460  0 
 bcm40181              341831  0 
 ```
+
+### iomem
+
+```plaintext
+linux@ubuntu:~> sudo cat /proc/iomem   
+00000000-00000000 : mali fb
+  00000000-00000000 : mali sdram
+    00000000-00000000 : fb2 buf
+1010e000-1010ffff : lcdc1 reg
+  1010e000-1010ffff : rk30-lcdc
+10110000-10113fff : rk29-ipp
+10114000-10115fff : rga
+  10114000-10115fff : rga_io
+10116000-10117fff : rk30-hdmi
+  10116000-10117fff : rk30-hdmi
+10118000-10119fff : rk29_i2s.0
+  10118000-10119fff : rk29_i2s
+1011c000-1011dfff : rk29_i2s.2
+  1011c000-1011dfff : rk29_i2s
+10124000-10125fff : rk_serial.0
+  10124000-10125fff : rk_serial
+10180000-101bffff : usb20_otg
+101c0000-101fffff : usb20_host
+10214000-10217fff : rk29_sdmmc.0
+10218000-1021bfff : rk29_sdmmc.1
+10500000-10503fff : rk29xxnand
+20018000-2001bfff : rk29-pl330.1
+  20018000-2001bfff : rk29-pl330
+2002d000-2002dfff : rk30_i2c.0
+  2002d000-2002dfff : rk30_i2c
+2002f000-2002ffff : rk30_i2c.1
+  2002f000-2002ffff : rk30_i2c
+20056000-20057fff : rk30_i2c.2
+  20056000-20057fff : rk30_i2c
+2005a000-2005bfff : rk30_i2c.3
+  2005a000-2005bfff : rk30_i2c
+2005e000-2005ffff : rk30_i2c.4
+  2005e000-2005ffff : rk30_i2c
+20060000-20063fff : rk30-tsadc
+  20060000-20063fff : rk30-tsadc
+20068000-2006bfff : rk_serial.3
+  20068000-2006bfff : rk_serial
+2006c000-2006ffff : rk30-adc
+  2006c000-2006ffff : rk30-adc
+20078000-2007bfff : rk29-pl330.2
+  20078000-2007bfff : rk29-pl330
+60000000-937fffff : System RAM
+  605a4000-60b5dadb : Kernel text
+  60b5e000-6144ba27 : Kernel data
+93800000-957fffff : ipp buf
+  93800000-957fffff : rk-fb
+95800000-967fffff : fb0 buf
+  95800000-967fffff : rk-fb
+96800000-9fffffff : System RAM
+```
